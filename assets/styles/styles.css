@@ -8,12 +8,17 @@
   --glass-border: rgba(255, 255, 255, 0.08);
 }
 
+html {
+  /* Fixes the issue where clicking links hides the title behind the navbar */
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-white);
   overflow-x: hidden;
-  scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 /* Custom Scrollbar */

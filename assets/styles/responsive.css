@@ -1,0 +1,191 @@
+/* =========================================
+   1. Navbar Toggler Fix (Global)
+   ========================================= */
+.navbar-toggler {
+  border: none !important;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Adds a purple glow when clicked/focused */
+.navbar-toggler:focus {
+  box-shadow: 0 0 10px rgba(123, 44, 191, 0.5) !important;
+  outline: none;
+}
+
+/* Ensure the icon lines are clearly white */
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   2. Responsive Layouts
+   ========================================= */
+
+/* --- Tablet & Smaller Laptops (max-width: 991px) --- */
+@media (max-width: 991px) {
+  /* FIXED: Stop the navbar from floating so it doesn't cover content */
+  .navbar.fixed-top {
+    position: relative !important;
+    top: auto;
+    background: #0b0216; /* Solid background */
+  }
+
+  /* Adjust Hero padding since Navbar is no longer floating */
+  .hero-section {
+    padding-top: 60px !important;
+    padding-bottom: 40px;
+  }
+
+  /* Navbar Menu Styling */
+  .navbar-collapse {
+    background: rgba(11, 2, 22, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2rem;
+    border-radius: 0 0 16px 16px;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .hero-section h1.display-4 {
+    font-size: 3.5rem;
+  }
+}
+
+/* --- Mobile Devices (max-width: 768px) --- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 40px !important;
+  }
+
+  .hero-section h1.display-4 {
+    font-size: 2.8rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1rem;
+  }
+
+  .avatar-container img {
+    width: 160px;
+  }
+
+  .highlight-text::after {
+    height: 40px;
+    bottom: 0px;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  /* Scale down orbit */
+  .tech-orbit-container {
+    height: 350px;
+    transform: scale(0.7);
+    margin-top: 0;
+    margin-bottom: -50px;
+  }
+
+  /* Footer Alignment */
+  footer {
+    text-align: center;
+  }
+  footer .col-md-6 {
+    justify-content: center !important;
+  }
+  footer .text-end {
+    text-align: center !important;
+    margin-top: 2rem;
+  }
+  footer .d-flex {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  footer .social-link {
+    margin-right: 0;
+  }
+}
+
+/* --- Small Mobile Phones (max-width: 576px) --- */
+@media (max-width: 576px) {
+  .hero-section h1.display-4 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .tech-orbit-container {
+    transform: scale(0.55);
+    height: 300px;
+  }
+
+  .project-card-img {
+    height: 180px;
+  }
+
+  .btn-custom,
+  .glass-card .btn {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* --- Ultra Small Screens (max-width: 390px) --- */
+@media (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .avatar-container img {
+    width: 130px;
+  }
+  .avatar-glow {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-section h1.display-4 {
+    font-size: 1.8rem;
+  }
+
+  /* Stack experience icons and text */
+  .glass-card .d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .glass-card .me-3 {
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Aggressive scaling for orbit */
+  .tech-orbit-container {
+    transform: scale(0.45);
+    height: 250px;
+  }
+}
