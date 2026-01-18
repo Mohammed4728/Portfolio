@@ -96,7 +96,11 @@ h6 {
 
 .avatar-container img {
   width: 200px;
+  height: 200px; /* FORCE height to match width */
+  object-fit: cover; /* Crops the image so it doesn't stretch */
   border: 4px solid var(--primary-purple);
+  /* You can remove border-radius here if you use bootstrap's .rounded-circle class in HTML, 
+     OR add border-radius: 50% here and remove the class from HTML. */
 }
 
 .highlight-text {
